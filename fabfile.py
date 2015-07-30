@@ -145,7 +145,7 @@ def github(publish_drafts=False): # 2
         pass
 
     local('ghp-import output')  # 4
-    local('git push'
-          'git@github.com:knowsuchagency/knowsuchagency.github.io.git'
+    local('git push '
+          'git@github.com:knowsuchagency/knowsuchagency.github.io.git '
           'gh-pages:master') # 5
     local('rm -rf output')  # 6
