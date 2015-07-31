@@ -41,11 +41,15 @@ PLUGIN_PATH = './plugins'
 PLUGINS = ['ipynb']
 
 # Top-level directory for themes
-THEME_ROOT = os.path.expanduser('~/pelican-themes/')
+THEME_ROOT = os.path.expanduser('~/git/pelican-themes/')
 
 # Theme
-THEME = os.path.join(THEME_ROOT, 'subtle')
+THEME = os.path.join('.', 'themes', 'subtle')
 
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+# For pelican elegant theme
+LANDING_PAGE_ABOUT = {'title': 'Test Title',
+'details': "I'm just a code ninja"}

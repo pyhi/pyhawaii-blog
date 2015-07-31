@@ -129,6 +129,7 @@ def live_build(port=8080):
         livereload.shell('pelican -s ../pelicanconf.py -o ../output'))  # 8
     server.watch('*.html')  # 9
     server.watch('*.css')  # 10
+    server.watch('./pelicanconf.py')
     server.serve(liveport=35729, port=port)  # 11
 
 def enter_dns_file():  # 1
