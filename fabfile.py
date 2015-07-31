@@ -118,6 +118,7 @@ def live_build(port=8080):
     local('make html')  # 2
     os.chdir('output')  # 3
     server = livereload.Server()  # 4
+    local('open http://localhost:8080')
     server.watch('../content/*.ipynb')
     server.watch('../content/*.md')
     server.watch('../content/*.rst',  # 5
