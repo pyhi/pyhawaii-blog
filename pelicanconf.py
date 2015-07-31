@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import os.path
 
 AUTHOR = 'Stephan Fitzpatrick'
-SITENAME = 'knowsuchagency'
+SITENAME = 'PyHawaii'
 SITEURL = ''
 
 PATH = 'content'
@@ -42,7 +42,7 @@ PLUGINS = ['ipynb']
 THEME_ROOT = os.path.expanduser('~/pelican-themes/')
 
 # Theme
-THEME = os.path.join(THEME_ROOT, 'iris')
+THEME = os.path.join(THEME_ROOT, 'subtle')
 
 
 # Uncomment following line if you want document-relative URLs when developing
