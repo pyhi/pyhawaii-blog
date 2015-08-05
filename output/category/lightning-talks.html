@@ -23,6 +23,7 @@
                 <h1><a href="">PyHawaii </a></h1>
                 <nav><ul>
                     <li class="active"><a href="/category/lightning-talks.html">lightning talks</a></li>
+                    <li ><a href="/category/wednesday-talks.html">wednesday talks</a></li>
                     <li ><a href="/category/weekly-talks.html">weekly talks</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
@@ -108,41 +109,36 @@
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><html><body><div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Pathlib-and-os.path">Pathlib and os.path<a class="anchor-link" href="#Pathlib-and-os.path">¶</a></h1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Pathlib-and-os.path">Pathlib and os.path<a class="anchor-link" href="#Pathlib-and-os.path">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="navigate-folders-like-a-pro!">navigate folders like a pro!<a class="anchor-link" href="#navigate-folders-like-a-pro!">&#182;</a></h2>
+<h2 id="navigate-folders-like-a-pro!">navigate folders like a pro!<a class="anchor-link" href="#navigate-folders-like-a-pro!">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="o">!</span>tree
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>.
@@ -160,377 +156,294 @@
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="k">import</span> <span class="n">Path</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="print-the-current-working-directory">print the current working directory<a class="anchor-link" href="#print-the-current-working-directory">&#182;</a></h2>
+<h2 id="print-the-current-working-directory">print the current working directory<a class="anchor-link" href="#print-the-current-working-directory">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># the old way</span>
 <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>&apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday&apos;</pre>
-</div>
-
-</div>
-
+<pre>'/Users/stephanfitzpatrick/git/python-weekly/week1/friday'</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># the new way</span>
 <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">())</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>&apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday&apos;</pre>
-</div>
-
-</div>
-
+<pre>'/Users/stephanfitzpatrick/git/python-weekly/week1/friday'</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># the full path to our current working directory</span>
-<span class="n">cwd_fullpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">cwd_fullpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s">'.'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">cwd_fullpath</span><span class="p">)</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>/Users/stephanfitzpatrick/git/python-weekly/week1/friday
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="iterate-over-paths">iterate over paths<a class="anchor-link" href="#iterate-over-paths">&#182;</a></h2>
+<h2 id="iterate-over-paths">iterate over paths<a class="anchor-link" href="#iterate-over-paths">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># old way</span>
 <span class="k">def</span> <span class="nf">get_paths</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;return an iterator of all paths in a given directory&quot;&quot;&quot;</span>
+    <span class="sd">"""return an iterator of all paths in a given directory"""</span>
     <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
             <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
             <span class="k">yield</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 
-<span class="nb">list</span><span class="p">(</span><span class="n">get_paths</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">))[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">get_paths</span><span class="p">(</span><span class="s">'.'</span><span class="p">))[:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>[&apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/.DS_Store&apos;,
- &apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/pathlib_lightning_talk.ipynb&apos;,
- &apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/pathlib_lightning_talk.slides.html&apos;,
- &apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/truth.txt&apos;,
- &apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/.ipynb_checkpoints/pathlib_lightning_talk-checkpoint.ipynb&apos;]</pre>
-</div>
-
-</div>
-
+<pre>['/Users/stephanfitzpatrick/git/python-weekly/week1/friday/.DS_Store',
+ '/Users/stephanfitzpatrick/git/python-weekly/week1/friday/pathlib_lightning_talk.ipynb',
+ '/Users/stephanfitzpatrick/git/python-weekly/week1/friday/pathlib_lightning_talk.slides.html',
+ '/Users/stephanfitzpatrick/git/python-weekly/week1/friday/truth.txt',
+ '/Users/stephanfitzpatrick/git/python-weekly/week1/friday/.ipynb_checkpoints/pathlib_lightning_talk-checkpoint.ipynb']</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># new way</span>
-<span class="nb">print</span><span class="p">(</span><span class="s">&#39;I was raised by wolves&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s">'I was raised by wolves'</span><span class="p">)</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>I was raised by wolves
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="filter-paths">filter paths<a class="anchor-link" href="#filter-paths">&#182;</a></h2>
+<h2 id="filter-paths">filter paths<a class="anchor-link" href="#filter-paths">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># old way</span>
 <span class="k">def</span> <span class="nf">ends_with</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">suffix</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;yield paths where the path ends in suffix&quot;&quot;&quot;</span>
+    <span class="sd">"""yield paths where the path ends in suffix"""</span>
     <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">get_paths</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">suffix</span><span class="p">):</span>
             <span class="k">yield</span> <span class="n">path</span>
             
-<span class="nb">list</span><span class="p">(</span><span class="n">ends_with</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">,</span> <span class="s">&#39;.py&#39;</span><span class="p">))</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">ends_with</span><span class="p">(</span><span class="s">'.'</span><span class="p">,</span> <span class="s">'.py'</span><span class="p">))</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>[&apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example1.py&apos;,
- &apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example2.py&apos;,
- &apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example3.py&apos;]</pre>
-</div>
-
-</div>
-
+<pre>['/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example1.py',
+ '/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example2.py',
+ '/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example3.py']</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># new way</span>
-<span class="p">[</span><span class="n">path</span><span class="o">.</span><span class="n">as_posix</span><span class="p">()</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s">&#39;*.py&#39;</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">path</span><span class="o">.</span><span class="n">as_posix</span><span class="p">()</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s">'*.py'</span><span class="p">)]</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>[&apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example1.py&apos;,
- &apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example2.py&apos;,
- &apos;/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example3.py&apos;]</pre>
-</div>
-
-</div>
-
+<pre>['/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example1.py',
+ '/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example2.py',
+ '/Users/stephanfitzpatrick/git/python-weekly/week1/friday/python_folder/example3.py']</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="create-paths">create paths<a class="anchor-link" href="#create-paths">&#182;</a></h2>
+<h2 id="create-paths">create paths<a class="anchor-link" href="#create-paths">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># old way</span>
-<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">,</span> <span class="s">&#39;Users&#39;</span><span class="p">,</span> <span class="s">&#39;stephanfitzpatrick&#39;</span><span class="p">,</span> <span class="s">&#39;git&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="s">'Users'</span><span class="p">,</span> <span class="s">'stephanfitzpatrick'</span><span class="p">,</span> <span class="s">'git'</span><span class="p">)</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>&apos;/Users/stephanfitzpatrick/git&apos;</pre>
-</div>
-
-</div>
-
+<pre>'/Users/stephanfitzpatrick/git'</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># new way</span>
-<span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">,</span> <span class="s">&#39;Users&#39;</span><span class="p">,</span> <span class="s">&#39;stephanfitzpatrick&#39;</span><span class="p">,</span> <span class="s">&#39;git&#39;</span><span class="p">))</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="s">'Users'</span><span class="p">,</span> <span class="s">'stephanfitzpatrick'</span><span class="p">,</span> <span class="s">'git'</span><span class="p">))</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>&apos;/Users/stephanfitzpatrick/git&apos;</pre>
-</div>
-
-</div>
-
+<pre>'/Users/stephanfitzpatrick/git'</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="open-files">open files<a class="anchor-link" href="#open-files">&#182;</a></h2>
+<h2 id="open-files">open files<a class="anchor-link" href="#open-files">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># old way</span>
-<span class="n">input_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">,</span> <span class="s">&#39;truth.txt&#39;</span><span class="p">)</span>
+<span class="n">input_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'.'</span><span class="p">,</span> <span class="s">'truth.txt'</span><span class="p">)</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">foo</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Python is the shizz
@@ -538,29 +451,23 @@
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># new way</span>
-<span class="k">with</span> <span class="n">Path</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">,</span> <span class="s">&#39;truth.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">()</span> <span class="k">as</span> <span class="n">foo</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">Path</span><span class="p">(</span><span class="s">'.'</span><span class="p">,</span> <span class="s">'truth.txt'</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">()</span> <span class="k">as</span> <span class="n">foo</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Python is the shizz
@@ -568,99 +475,68 @@
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="variable-expansion">variable expansion<a class="anchor-link" href="#variable-expansion">&#182;</a></h2>
+<h2 id="variable-expansion">variable expansion<a class="anchor-link" href="#variable-expansion">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># old way</span>
-<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="s">&quot;$ZSH&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="s">"$ZSH"</span><span class="p">)</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>&apos;/Users/stephanfitzpatrick/.oh-my-zsh&apos;</pre>
-</div>
-
-</div>
-
+<pre>'/Users/stephanfitzpatrick/.oh-my-zsh'</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># old way</span>
-<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">"~"</span><span class="p">)</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
-
-
 <div class="output_text output_subarea output_execute_result">
-<pre>&apos;/Users/stephanfitzpatrick&apos;</pre>
-</div>
-
-</div>
-
+<pre>'/Users/stephanfitzpatrick'</pre>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># new way</span>
 </pre></div>
-
 </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Just-kidding!-The-old-way-is-still-awesome-:D">Just kidding! The old way is still awesome :D<a class="anchor-link" href="#Just-kidding!-The-old-way-is-still-awesome-:D">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -669,7 +545,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Once-again,-with-feeling!">Once again, with feeling!<a class="anchor-link" href="#Once-again,-with-feeling!">&#182;</a></h2>
+<h4 id="Just-kidding!-The-old-way-is-still-awesome-:D">Just kidding! The old way is still awesome :D<a class="anchor-link" href="#Just-kidding!-The-old-way-is-still-awesome-:D">¶</a></h4>
 </div>
 </div>
 </div>
@@ -678,28 +554,33 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pathlib-and-os.path-work-together-in-beautiful-harmony">Pathlib and os.path work together in beautiful harmony<a class="anchor-link" href="#Pathlib-and-os.path-work-together-in-beautiful-harmony">&#182;</a></h3>
+<h2 id="Once-again,-with-feeling!">Once again, with feeling!<a class="anchor-link" href="#Once-again,-with-feeling!">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pathlib-and-os.path-work-together-in-beautiful-harmony">Pathlib and os.path work together in beautiful harmony<a class="anchor-link" href="#Pathlib-and-os.path-work-together-in-beautiful-harmony">¶</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">Path</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
-    <span class="n">is_dir</span> <span class="o">=</span> <span class="s">&#39;is&#39;</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">))</span> <span class="k">else</span> <span class="s">&#39;is not&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s">&quot;{:34} {:&lt;} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">is_dir</span><span class="p">,</span> <span class="s">&#39;a directory&#39;</span><span class="p">))</span>
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">Path</span><span class="p">(</span><span class="s">'.'</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="n">is_dir</span> <span class="o">=</span> <span class="s">'is'</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">))</span> <span class="k">else</span> <span class="s">'is not'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s">"{:34} {:&lt;} {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">is_dir</span><span class="p">,</span> <span class="s">'a directory'</span><span class="p">))</span>
 </pre></div>
-
 </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>.DS_Store                          is not a directory
@@ -712,23 +593,19 @@ truth.txt                          is not a directory
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-    <div class="input_area">
+<div class="input_area">
 <div class=" highlight hl-ipython3"><pre> 
 </pre></div>
-
 </div>
 </div>
 </div>
-
 </div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');

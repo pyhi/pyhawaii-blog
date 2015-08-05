@@ -5,6 +5,7 @@ import shutil
 import sys
 import SocketServer
 import livereload
+from datetime import datetime
 
 from pelican.server import ComplexHTTPRequestHandler
 
