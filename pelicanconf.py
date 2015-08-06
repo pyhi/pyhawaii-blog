@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import os.path
 
 AUTHOR = 'Stephan Fitzpatrick'
-SITENAME = 'PyHawaii'
+SITENAME = 'PyHawaii: PY>i'
 SITEURL = ''
 
 PATH = 'content'
