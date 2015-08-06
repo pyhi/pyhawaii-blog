@@ -138,8 +138,8 @@
 <span class="nd">@app.route</span><span class="p">(</span><span class="s">'/upload'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'POST'</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">upload</span><span class="p">():</span>
     <span class="n">table</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
-    <span class="nb">file</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s">'file'</span><span class="p">]</span>
-    <span class="n">table</span><span class="o">.</span><span class="n">csv</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">uploaded_file</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s">'file'</span><span class="p">]</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">csv</span> <span class="o">=</span> <span class="n">uploaded_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">table</span><span class="o">.</span><span class="n">html</span>
 
 
@@ -188,16 +188,16 @@
                 <div class="blogroll">
                         <h2>blogroll</h2>
                         <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="http://hicapacity.org">HiCapacity</a></li>
+                            <li><a href="http://theboxjelly.com/">The Box Jelly</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
                         <h2>social</h2>
                         <ul>
                             
-                            <li><a href="http://twitter.com/knowsuchagency">twitter</a></li>
+                            <li><a href="http://twitter.com/knowsuchagency">Stephan's Twitter</a></li>
+                            <li><a href="http://twitter.com/py_hawaii">PyHawaii's Twitter</a></li>
                         </ul>
                 </div><!-- /.social -->
         </section><!-- /#extras -->

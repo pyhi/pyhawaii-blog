@@ -37,6 +37,7 @@ def clean():
 def build():
     """Build local version of site"""
     local('pelican -s pelicanconf.py')
+    enter_dns_file()
 
 def rebuild():
     """`clean` then `build`"""
@@ -139,7 +140,7 @@ def enter_dns_file():  # 1
 
 
 def github(publish_drafts=False): # 2
-
+    """Push to github pages."""
     try:  # 3
         if os.path.exists('output/drafts'):
             if not publish_drafts:

@@ -21,15 +21,15 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
+LINKS = (('HiCapacity', 'http://hicapacity.org'),
+         ('The Box Jelly', 'http://theboxjelly.com/'),
+        #  ('Jinja2', 'http://jinja.pocoo.org/'),
         #  ('You can modify those links in your config file', '#'),
          )
 
 # Social widget
-SOCIAL = (('twitter', 'http://twitter.com/knowsuchagency'),
-        #   ('Another social link', '#'),
+SOCIAL = (("Stephan's Twitter", 'http://twitter.com/knowsuchagency'),
+          ("PyHawaii's Twitter", 'http://twitter.com/py_hawaii'),
           )
 
 DEFAULT_PAGINATION = 10
