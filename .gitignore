@@ -4,3 +4,7 @@ __pycache__
 
 # Other
 .DS_Store
+
+IPython stuff
+**.ipynb_checkpoints
+*Untitled*

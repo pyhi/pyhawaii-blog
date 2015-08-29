@@ -141,6 +141,7 @@ def enter_dns_file():  # 1
 
 def github(publish_drafts=False): # 2
     """Push to github pages."""
+    enter_dns_file()
     try:  # 3
         if os.path.exists('output/drafts'):
             if not publish_drafts:
